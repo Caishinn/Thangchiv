@@ -18,7 +18,7 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  background-color: #2b2f4b;
+  background-color: #262626;
   color: #fff;
 }
 
@@ -92,8 +92,8 @@ header .info-text .scroll::before {
 
 #about,
 #features {
-  background-color: #2b2f4b;
-  padding: 40px;
+  background-color: #262626;
+  padding: 20px;
 }
 
 #about .header,
@@ -109,6 +109,7 @@ header .info-text .scroll::before {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
+  font-size: 1.7rem;
 }
 
 #about .header a,
@@ -131,11 +132,12 @@ header .info-text .scroll::before {
 
 #about .card,
 #features .card {
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  justify-content: space-around;
   border: 1px solid transparent;
   transition: all 0.3s ease;
 }
@@ -147,12 +149,13 @@ header .info-text .scroll::before {
 }
 
 #about .card img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 12px;
 }
 
 #about .card .info {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -162,7 +165,7 @@ header .info-text .scroll::before {
 #features .card .info h1 {
   margin-bottom: 20px;
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: bold;
   font-family: "Ubuntu";
 }
@@ -177,7 +180,7 @@ header .info-text .scroll::before {
 #features .feature-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -189,12 +192,20 @@ header .info-text .scroll::before {
   min-width: 350px;
 }
 
-#features .feature-cards .card .info i {
+/* #features .feature-cards .card .info i {
   color: #fff;
   font-size: 8rem;
   width: 100%;
   text-align: center;
   margin-bottom: 1.4rem;
+} */
+#features .feature-cards .card .info img {
+  width: 320px;
+  height: 320px;
+  object-fit: contain;
+  align-items: center;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
 #features .feature-cards .card .info h1 {
@@ -203,6 +214,7 @@ header .info-text .scroll::before {
 
 #features .feature-cards .card .info p {
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .scroll-top {
@@ -228,20 +240,59 @@ header .info-text .scroll::before {
 
 @media screen and (max-width: 720px) {
   header .info-text h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   header .info-text h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  #about .info h1 {
+    text-align: center;
   }
 
   #about .card {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   #about .card img {
     max-width: 150px;
     max-height: 150px;
   }
+}
+/*===== ABOUT =====*/
+
+.about {
+  justify-content: space-between;
+  position: relative;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+}
+.about li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #717171;
+  font-size: 0.9rem;
+}
+.about span {
+  color: white;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+.about::after {
+  position: absolute;
+  content: "";
+  bottom: -30px;
+  display: block;
+  background: #717171;
+  height: 5px;
+  width: 100%;
 }
